@@ -1,0 +1,49 @@
+html{
+	font-size:50%;
+}
+p{
+	color: purple;
+	font-size:2rem;
+	
+	}
+	
+a:link{
+	color:black;
+	text-decoration: bold;
+}
+a:visited{
+	color:red;
+	 
+}
+a:hover{
+	color:green;
+	font-size:300%;
+}
+th{
+	color: red;
+
+	}
+body{
+	background: pink;
+
+}
+a{
+color:black;
+}
+div{
+	background-color: white;
+	font:italic bold 2rem Arial;
+	}
+#table1,tr,ol{
+	 
+	 border-style: dotted solid;
+	 padding:12px;
+}
+ol{
+	font-size:250%
+}
+	
+
+
+
+
