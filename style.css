@@ -34,10 +34,9 @@ div{
 	background-color: white;
 	font:italic bold 2rem Arial;
 	}
-#table1,tr,ol{
-	 
-	 border-style: dotted solid;
-	 padding:12px;
+
+th{
+	border: solid thin black;
 }
 ol{
 	font-size:250%
