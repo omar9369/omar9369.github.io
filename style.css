@@ -4,7 +4,8 @@ html{
 p{
 	color: purple;
 	font-size:2rem;
-	
+	padding: 8px;
+	min-width: 550px
 	}
 	
 a:link{
@@ -33,17 +34,30 @@ color:black;
 div{
 	background-color: white;
 	font:italic bold 2rem Arial;
+	padding: 8px;
+	min-width: 550px;
+	border:25px solid yellow;
+	text-indent:50px;
 	}
 #table1,tr,ol{
 	 
 	 border-style: dotted solid;
 	 padding:12px;
+	 min-width: 550px
 }
 ol{
 	font-size:250%
 }
 .rice{
 	color:blue;
+}
+h3{
+	text-shadow: 0.1em 0.1em 0.2em black;
+	font-size:4rem;
+	color: purple;
+}
+form{
+	font-size:4rem;
 }
 	
 
