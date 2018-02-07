@@ -34,12 +34,16 @@ div{
 	background-color: white;
 	font:italic bold 2rem Arial;
 	}
-
-th{
-	border: solid thin black;
+#table1,tr,ol{
+	 
+	 border-style: dotted solid;
+	 padding:12px;
 }
 ol{
 	font-size:250%
+}
+.rice{
+	color:red;
 }
 	
 
