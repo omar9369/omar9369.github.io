@@ -20,7 +20,7 @@ a:hover{
 	color:green;
 	font-size:300%;
 }
-th{
+td{
 	color: red;
 
 	}
@@ -29,7 +29,7 @@ body{
 
 }
 a{
-color:black;
+color:blue;
 }
 div{
 	background-color: white;
@@ -59,7 +59,16 @@ h3{
 form{
 	font-size:4rem;
 }
-	
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; 
+    top: 0; 
+    width: 100%;
+	border:pink;
+	color:white;
+	left:0;
+}
 
 
 

@@ -9,6 +9,9 @@
 	</head>
 	<body>
 		<h1><p style = "color:red;">Mahshi</p></h1>
+		<div class="navbar">
+			 <a href="#home">Home</a>
+		</div>
 		<div>
 		<p><b>Stuffed squash, marrow, or zucchini</b> is a dish of the region of the <q>former Ottoman</q> Empire from the Balkans to the Levant, a kind of dolma. 
 		It consists of various kinds of squash or zucchini stuffed with <span class="rice">rice</span> and sometimes meat and cooked on the stovetop or in the oven. 
@@ -56,10 +59,21 @@
 			<input type="text" name="Fname" />
 			<input type="submit" value="Go to Gmail"/>
 		</form> 
-		
-		
-		
-		
+		<p> id="func"</p>
+		<script>
+			
+			var a=2;
+			var b=5;
+			function myFunc(a,b){
+				if(a<b){
+					var x=7;
+				}
+				
+				console.log(x);
+			}
+			document.getElementById("func").innerHTML = myFunc(2,5);
+			myFunc(a,b);
+		</script>	
 		
 		
 		
@@ -77,7 +91,5 @@
 			<input type="submit" value="Go to Google" />
 			</form>
 
-	
-	</body>
 	
 </html>
