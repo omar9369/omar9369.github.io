@@ -68,7 +68,11 @@ function enter () {
 		document.getElementById("table").deleteRow(1);
 	}
 	cell2.innerHTML = document.getElementById("myDate").value
+	
 	cell3.innerHTML = document.getElementById("otherDate").value
+	if(cell2.innerHTML>cell3.innerHTML){
+		alert("Please enter a valid date");
+	}
 	cell4.innerHTML = document.getElementById("category").value;
 	cell5.innerHTML = "<input type='checkbox'></input>";
 	cell6.innerHTML = "<input type='button' value='Delete' onclick='deleteRow(this)'></input>";				
