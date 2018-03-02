@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+		<meta charset="lab1"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" href="picturess.css"/>
+	</head>
+<body onkeydown="buttonPress(event)">
+
+<h2 style="text-align:center">Photo Gallery</h2>
+
+
+<div class="row">
+
+  <div class="column">
+    <img  src="https://www.publicdomainpictures.net/pictures/130000/velka/life-is-beautiful-sign-5.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="https://www.publicdomainpictures.net/pictures/120000/velka/respect-yourself-confucius.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="https://www.publicdomainpictures.net/pictures/180000/velka/lone-tree-in-fairy-lake.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="https://www.publicdomainpictures.net/pictures/140000/velka/life-is-always-better.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+
+	<div class="column">
+    <img src="https://www.publicdomainpictures.net/pictures/240000/velka/chalkboard-quote.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+	</div>
+	
+	<div class="column">
+    <img src="https://www.publicdomainpictures.net/pictures/140000/velka/believe-1448935450MCW.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+  </div>
+	
+	<div class="column">
+    <img src="https://www.publicdomainpictures.net/pictures/240000/velka/sunset-by-the-sea.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="https://www.publicdomainpictures.net/pictures/200000/velka/your-dreams-set-sale.jpg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="https://www.publicdomainpictures.net/pictures/110000/velka/live-laugh-love-chalkboard.jpg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+  </div>
+    
+  <div class="column">
+    <img src="https://www.publicdomainpictures.net/pictures/60000/velka/dramatic-sky.jpg" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+  </div>
+  
+	<div class="column">
+    <img src="http://publicdomainarchive.com/wp-content/uploads/2014/02/public-domain-images-free-high-quality-resolution-2014-02-25-0003.jpg" style="width:100%" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
+	
+	</div>
+	<div class="column">
+    <img src="https://www.publicdomainpictures.net/pictures/140000/velka/believe-1448935450MCW.jpg" style="width:100%" onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
+  </div>
+	
+	<div class="column">
+    <img src="http://publicdomainarchive.com/wp-content/uploads/2014/02/public-domain-images-free-high-resolution-quality-photos-unsplash-0115.jpg" style="width:100%" onclick="openModal();currentSlide(13)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="https://www.publicdomainpictures.net/pictures/240000/velka/drawing.jpg" style="width:100%" onclick="openModal();currentSlide(14)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="http://publicdomainarchive.com/wp-content/uploads/2014/02/public-domain-images-free-high-resolution-quality-photos-unsplash-0111.jpg" style="width:100%" onclick="openModal();currentSlide(15)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="http://publicdomainarchive.com/wp-content/uploads/2014/02/public-domain-images-free-high-resolution-quality-photos-unsplash-0112.jpg" style="width:100%" onclick="openModal();currentSlide(16)" class="hover-shadow cursor">
+  </div>
+
+	<div class="column">
+    <img src="http://publicdomainarchive.com/wp-content/uploads/2014/02/public-domain-images-free-high-resolution-quality-photos-unsplash-0113.jpg" style="width:100%" onclick="openModal();currentSlide(17)" class="hover-shadow cursor">
+	</div>
+	
+	<div class="column">
+    <img src="http://publicdomainarchive.com/wp-content/uploads/2014/02/public-domain-images-free-high-resolution-quality-photos-unsplash-0114.jpg" style="width:100%" onclick="openModal();currentSlide(18)" class="hover-shadow cursor">
+  
+	</div>
+	<div class="column">
+    <img src="http://publicdomainarchive.com/wp-content/uploads/2014/02/public-domain-images-free-high-resolution-quality-photos-unsplash-0117.jpg" style="width:100%" onclick="openModal();currentSlide(19)" class="hover-shadow cursor">
+	</div>
+	
+	<div class="column">
+    <img src="https://www.publicdomainpictures.net/pictures/150000/velka/walt-whitman-quote-about-sunshine.jpg" style="width:100%" onclick="openModal();currentSlide(20)" class="hover-shadow cursor">
+  </div>
+	</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 20</div>
+      <img src="https://www.publicdomainpictures.net/pictures/130000/velka/life-is-beautiful-sign-5.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 20</div>
+      <img src="https://www.publicdomainpictures.net/pictures/120000/velka/respect-yourself-confucius.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 20</div>
+      <img src="https://www.publicdomainpictures.net/pictures/180000/velka/lone-tree-in-fairy-lake.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 20</div>
+      <img src="https://www.publicdomainpictures.net/pictures/140000/velka/life-is-always-better.jpg" style="width:100%">
+    </div>
+	
+	<div class="mySlides fade">
+      <div class="numbertext">5 / 20</div>
+      <img src="https://www.publicdomainpictures.net/pictures/240000/velka/chalkboard-quote.jpg" style="width:100%">
+    </div>
+	
+	<div class="mySlides fade">
+      <div class="numbertext">6 / 20</div>
+      <img src="https://www.publicdomainpictures.net/pictures/140000/velka/believe-1448935450MCW.jpg" style="width:100%">
+    </div>
+	
+	<div class="mySlides fade">
+      <div class="numbertext">7 / 20</div>
+      <img src="http://publicdomainarchive.com/wp-content/uploads/2014/02/public-domain-images-free-high-quality-resolution-2014-02-25-0003.jpg" style="width:100%">
+    </div>
+	
+	<div class="mySlides fade">
+      <div class="numbertext">8 / 20</div>
+      <img src="https://www.publicdomainpictures.net/pictures/200000/velka/your-dreams-set-sale.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">9 / 20</div>
+      <img src="https://www.publicdomainpictures.net/pictures/110000/velka/live-laugh-love-chalkboard.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">10 / 20</div>
+      <img src="https://www.publicdomainpictures.net/pictures/60000/velka/dramatic-sky.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">11 / 20</div>
+      <img src="http://publicdomainarchive.com/wp-content/uploads/2014/02/public-domain-images-free-high-quality-resolution-2014-02-25-0003.jpg" style="width:100%">
+    </div>
+	
+	<div class="mySlides fade">
+      <div class="numbertext">12 / 20</div>
+      <img src="https://www.publicdomainpictures.net/pictures/240000/velka/chalkboard-quote.jpg" style="width:100%">
+    </div>
+	
+	<div class="mySlides fade">
+      <div class="numbertext">13 / 20</div>
+      <img src="http://publicdomainarchive.com/wp-content/uploads/2014/02/public-domain-images-free-high-resolution-quality-photos-unsplash-0115.jpg" style="width:100%">
+    </div>
+	
+	<div class="mySlides fade">
+      <div class="numbertext">14 / 20</div>
+      <img src="https://www.publicdomainpictures.net/pictures/240000/velka/drawing.jpg" style="width:100%">
+    </div>
+	
+	<div class="mySlides fade">
+      <div class="numbertext">15 / 20</div>
+      <img src="http://publicdomainarchive.com/wp-content/uploads/2014/02/public-domain-images-free-high-resolution-quality-photos-unsplash-0111.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">16 / 20</div>
+      <img src="http://publicdomainarchive.com/wp-content/uploads/2014/02/public-domain-images-free-high-resolution-quality-photos-unsplash-0112.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">17 / 20</div>
+      <img src="http://publicdomainarchive.com/wp-content/uploads/2014/02/public-domain-images-free-high-resolution-quality-photos-unsplash-0113.jpg" style="width:100%">
+    </div>
+	
+	<div class="mySlides fade">
+      <div class="numbertext">18 / 20</div>
+      <img src="http://publicdomainarchive.com/wp-content/uploads/2014/02/public-domain-images-free-high-resolution-quality-photos-unsplash-0114.jpg" style="width:100%">
+    </div>
+	
+	<div class="mySlides fade">
+      <div class="numbertext">19 / 20</div>
+      <img src="http://publicdomainarchive.com/wp-content/uploads/2014/02/public-domain-images-free-high-resolution-quality-photos-unsplash-0117.jpg" style="width:100%">
+    </div>
+	<div class="mySlides fade">
+      <div class="numbertext">20 / 20</div>
+      <img src="https://www.publicdomainpictures.net/pictures/150000/velka/walt-whitman-quote-about-sunshine.jpg" style="width:100%">
+    </div>
+    
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+	<button onclick="myVar = setInterval(plusSlide,10000)">Play slide show</button>
+	<button onclick="clearTimeout(myVar)">Stop slide show</button>
+	</div>
+	</div>
+<script>
+
+
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+function plusSlide(){
+	showSlides(slideIndex=slideIndex+1);
+	}
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+
+	
+function currentSlide() {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
+
+}
+function buttonPress(event){
+	var keyboard = event.which || event.keyCode;
+	if(keyboard == "39"){
+		plusSlides(1);
+	}
+	if(keyboard == "37"){
+		plusSlides(-1);
+	}
+	if(keyboard == "27"){
+		closeModal();
+	}
+}
+
+</script>
+    
+</body>
+</html>

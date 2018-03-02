@@ -1,0 +1,260 @@
+<!DOVTYPE html>
+<html>
+	<head>
+		<meta charset="lab1"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" href="todoList.css"/>
+	</head>
+	<body>
+	
+		<h1><u>To-do list!</u></h1>
+		<br></br>
+		<div id="firstDIv" class="search">
+		<input type="text" id="userInput" placeholder="Your To-Do list">
+		
+		<div>
+		<h3>Choose date:
+		<input type="date" id="myDate" value="2014-02-09">
+		Choose due-date
+		
+		<input type="date" id="otherDate" value="2014-02-09">
+		<br></br>
+	Choose Category:</h3>
+		<select  id="category">
+			<option> </option>
+			<option value="Homework" id="Homework">Homework</option>
+			<option value="WorkOut" id="workOut">Work Out</option>
+			<option value="ChargePhone" id= "ChargePhone">Charge Phone</option>
+			<option value="Cooking" id="Cooking">Cooking</option>
+		</select>
+		<button  onclick="enter()" class="userInput">Submit task</button>
+		<p><input type="text" id="addCat" placeholder="Add Category">
+		<button onclick="runList()">New Category</button></p>
+			Select your favorite color for you category: <input type="color" id= "selectColor" value="red"></input>		
+		</div>
+	<br></br>
+	<button onclick="sortTable4()">Sort Check marks</button>
+	<br></br>
+	<table id="table">
+		<tr>
+			<th onclick="sorting(0)">To-Do List</th>
+			<th onclick="sorting(1)">Date</th>
+			<th onclick="sorting(2)">Due date</th>
+			<th onclick="sorting(3)">Category</th>
+		</tr>
+	<p>Click on the header of each column do ascend or descend
+<script>
+var colorArray=[];
+var tempo = 0;
+function enter () { 
+
+	var theList=document.getElementById("userInput").value;
+	var input =document.createElement("INPUT");
+	input.setAttribute("type", "checkbox");
+	var row = table.insertRow(1);
+	var cell1 = row.insertCell(0);
+	var cell2 = row.insertCell(1);
+	var cell3 = row.insertCell(2);
+	var cell4 = row.insertCell(3);
+	var cell5 = row.insertCell(4);
+	var cell6 = row.insertCell(5);
+	var p = theList;
+	
+	cell1.innerHTML = p;
+	if(cell1.innerHTML == ""){
+		alert("Please enter a task");
+		document.getElementById("table").deleteRow(1);
+	}
+	cell2.innerHTML = document.getElementById("myDate").value
+	cell3.innerHTML = document.getElementById("otherDate").value
+	cell4.innerHTML = document.getElementById("category").value;
+	cell5.innerHTML = "<input type='checkbox'></input>";
+	cell6.innerHTML = "<input type='button' value='Delete' onclick='deleteRow(this)'></input>";				
+
+	console.log(document.getElementById('category').value);
+	switch(document.getElementById("category").value){
+		case "Homework":
+			cell4.style.background="green";
+			cell4.style.color="white";
+			break;
+		case "WorkOut":
+			cell4.style.background="blue";
+			cell4.style.color="white";
+			break;
+		case "ChargePhone":
+			cell4.style.background="red";
+			cell4.style.color="white";
+			break;
+		case "Cooking":
+			cell4.style.background="black";
+			cell4.style.color="white";
+			break;
+		case "document.getElementById('category').value":
+			cell4.style.background="brown";
+			cell4.style.color="white";
+		break;
+	}	
+	var pp = 0;
+	var oo = false;
+	while(oo == false && pp<tempo+2){	
+		if(colorArray[pp] == document.getElementById('category').value){
+			cell4.style.background=colorArray[pp+1];
+			cell4.style.color = "white";
+			oo==true;
+		}	
+	pp=pp+2;
+	}
+	}
+function deleteRow(r) {
+	var yes = window.confirm("Are you sure you want to delete this row");
+	var i = r.parentNode.parentNode.rowIndex;	
+	if(yes){
+		document.getElementById('table').deleteRow(i);
+	}
+	}
+	
+
+function sorting(n) {
+	var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+	table = document.getElementById("table");
+	switching = true;
+	//Set the sorting direction to ascending:
+	dir = "asc"; 
+	/*Make a loop that will continue until
+	no switching has been done:*/
+	while (switching) {
+	//start by saying: no switching is done:
+		switching = false;
+		rows = table.getElementsByTagName("TR");
+		/*Loop through all table rows (except the
+		first, which contains table headers):*/
+		for (i = 1; i < (rows.length-1); i++) {
+			//start by saying there should be no switching:
+			shouldSwitch = false;
+			/*Get the two elements you want to compare,
+			one from current row and one from the next:*/
+			x = rows[i].getElementsByTagName("TD")[n];
+			console.log();
+			y = rows[i + 1].getElementsByTagName("TD")[n];
+			/*check if the two rows should switch place,
+			based on the direction, asc or desc:*/
+			if (dir == "asc") {
+			if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+			 //if so, mark as a switch and break the loop:
+			shouldSwitch= true;
+			break;
+			}
+			}else if (dir == "desc") {
+				if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+				//if so, mark as a switch and break the loop:
+					shouldSwitch= true;
+					break;
+				}
+			}
+		}
+		if (shouldSwitch) {
+		  /*If a switch has been marked, make the switch
+		  and mark that a switch has been done:*/
+		  rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+		  switching = true;
+		  //Each time a switch is done, increase this count by 1:
+		  switchcount ++;      
+		}else {
+		  /*If no switching has been done AND the direction is "asc",
+		  set the direction to "desc" and run the while loop again.*/
+		  if (switchcount == 0 && dir == "asc") {
+			dir = "desc";
+			switching = true;
+		  }
+		}
+	}
+}
+
+
+var table, rows, switching, column, x, y, shouldSwitch;
+table = document.getElementById("table");
+switching = true;
+/*Make a loop that will continue until
+no switching has been done:*/
+while (switching) {
+//start by saying: no switching is done:
+	switching = false;
+	rows = table.getElementsByTagName("TR");
+	/*Loop through all table rows (except the
+	first, which contains table headers):*/
+	for (column = 1; column < (rows.length - 1); column++) {
+		//start by saying there should be no switching:
+		shouldSwitch = false;
+	  /*Get the two elements you want to compare,
+	  one from current row and one from the next:*/
+		x = rows[column].getElementsByTagName("TD")[4].getElementsByTagName("input")[0];
+		y = rows[column + 1].getElementsByTagName("TD")[4].getElementsByTagName("input")[0];
+		
+	  //check if the two rows should switch place:
+		if (x.checked > y.checked) {
+		//if so, mark as a switch and break the loop:
+			shouldSwitch= true;
+			break;
+	  }
+	}
+	if (shouldSwitch) {
+	  /*If a switch has been marked, make the switch
+	  and mark that a switch has been done:*/
+	  rows[column].parentNode.insertBefore(rows[column + 1], rows[column]);
+	  switching = true;
+	}
+}
+  
+function sortTable4() {
+	var table, rows, switching, column, x, y, shouldSwitch;
+	table = document.getElementById("table");
+	switching = true;
+	/*Make a loop that will continue until
+	no switching has been done:*/
+	while (switching) {
+	//start by saying: no switching is done:
+		switching = false;
+		rows = table.getElementsByTagName("TR");
+		/*Loop through all table rows (except the
+		first, which contains table headers):*/
+		for (column = 1; column < (rows.length - 1); column++) {
+			//start by saying there should be no switching:
+			shouldSwitch = false;
+		  /*Get the two elements you want to compare,
+		  one from current row and one from the next:*/
+			x = rows[column].getElementsByTagName("TD")[4].getElementsByTagName("input")[0];
+			y = rows[column + 1].getElementsByTagName("TD")[4].getElementsByTagName("input")[0];
+			
+		  //check if the two rows should switch place:
+			if (x.checked > y.checked) {
+			//if so, mark as a switch and break the loop:
+				shouldSwitch= true;
+				break;
+		  }
+		}
+		if (shouldSwitch) {
+		  /*If a switch has been marked, make the switch
+		  and mark that a switch has been done:*/
+		  rows[column].parentNode.insertBefore(rows[column + 1], rows[column]);
+		  switching = true;
+		}
+	}	
+}
+
+function runList(){
+	var selectColor = document.getElementById('selectColor').value;
+	var select = document.getElementById('category');
+	var addCategory = document.getElementById('addCat').value;
+	if(addCategory == ""){
+		alert("Please add a category");
+	}else{
+		select.options[select.options.length] = new Option(addCategory.toString(), addCategory.toString());
+		colorArray[0] = addCategory;
+		colorArray[1] = selectColor;
+		tempo = tempo+2;
+	}
+}
+
+	</script>
+	</body>
+</html>
