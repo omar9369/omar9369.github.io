@@ -269,7 +269,7 @@ button {
     <img src="https://www.publicdomainpictures.net/pictures/150000/velka/walt-whitman-quote-about-sunshine.jpg" style="width:100%" onclick="openModal();currentSlide(20)" class="hover-shadow cursor">
   </div>
 	</div>
-</div>
+
 
 <div id="myModal" class="modal">
   <span class="close cursor" onclick="closeModal()">&times;</span>
@@ -376,6 +376,7 @@ button {
     
 	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
+	
 
     <div class="caption-container">
       <p id="caption"></p>
@@ -409,7 +410,7 @@ button {
     <div class="column">
       <img class="demo cursor" src="https://www.publicdomainpictures.net/pictures/200000/velka/your-dreams-set-sale.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
     </div>
-  </div>
+  
   <div class="column">
       <img class="demo cursor" src="https://www.publicdomainpictures.net/pictures/110000/velka/live-laugh-love-chalkboard.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
     </div>
@@ -422,7 +423,7 @@ button {
     <div class="column">
       <img class="demo cursor"src="https://www.publicdomainpictures.net/pictures/240000/velka/chalkboard-quote.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
     </div>
-  </div>
+  
   <div class="column">
       <img class="demo cursor" src="http://publicdomainarchive.com/wp-content/uploads/2014/02/public-domain-images-free-high-resolution-quality-photos-unsplash-0115.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
     </div>
@@ -435,7 +436,7 @@ button {
     <div class="column">
       <img class="demo cursor" src="http://publicdomainarchive.com/wp-content/uploads/2014/02/public-domain-images-free-high-resolution-quality-photos-unsplash-0111.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
     </div>
-  </div>
+ 
   <div class="column">
       <img class="demo cursor"src="http://publicdomainarchive.com/wp-content/uploads/2014/02/public-domain-images-free-high-resolution-quality-photos-unsplash-0112.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
     </div>
@@ -448,8 +449,9 @@ button {
     <div class="column">
       <img class="demo cursor" src="https://www.publicdomainpictures.net/pictures/150000/velka/walt-whitman-quote-about-sunshine.jpg"style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
     </div>
-  </div>
-  </div>
+</div>
+
+  
 <script>
 
 
@@ -493,7 +495,6 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
 
 }
 function buttonPress(event){
